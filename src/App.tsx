@@ -1,16 +1,19 @@
-import React from "react";
-import logo from "./logo.svg";
-import { Button } from "antd";
-import "./App.css";
+/** @jsx jsx */
+import { css, jsx } from "@emotion/core";
+import SyncInboxContainer from "./SyncInboxContainer";
+
+const containerStyle = css`
+  padding: 40px;
+  background: gray;
+`;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Button type="primary">Click Me!</Button>
-        <p>Hi, Zain!</p>
+    <div css={containerStyle}>
+      <header>
+        <h3>Sync Inbox</h3>
       </header>
+      <SyncInboxContainer />
     </div>
   );
 }
